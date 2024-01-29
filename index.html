@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paystack + Apple Pay</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="card">
+        <img src="/candle_diffuser.jpeg" class="card__image" />
+        <div class="card__title">Scented Candle + Reed Diffuser</div>
+        <div class="card__description">
+          With notes of Mulled Cider, Oud, and Cinnamon, Paystack's custom scent both soothes and excites.
+        </div>
+        <div class="card__buttons">
+          <div id="paystack-apple-pay"></div>
+          <!-- <button id="paystack-other-channels" class="button">More payment options</button> -->
+          <!-- <button id="payment-btn" class="button">Make Payment</button> -->
+        </div>
+      </div>
+    </div>
+    <script src="https://js.paystack.co/v2/inline.js"></script>
+    <script src="/main.js" type="module"></script>
+  </body>
+</html>
