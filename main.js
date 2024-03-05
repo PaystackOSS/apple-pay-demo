@@ -46,7 +46,7 @@ const makePaymentButton = document.getElementById('payment-btn')
 // Method 2
 const makePayment = async () => {
   await paystack.checkout({
-    key: PUBLIC_KEY,
+    // key: PUBLIC_KEY,
     accessCode: "n0a04yemqdflit4",
     // email: 'example@email.com',
     // amount: 10000,
