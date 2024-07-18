@@ -52,11 +52,7 @@ const makePayment = async () => {
       alert(`Ref: ${transaction.reference}`)
     },
     onElementsMount(elements) { // { applePay: true } or null
-      if (elements) {
-        console.log(`Successfully mounted elements: ${JSON.stringify(elements)}`);
-      } else {
-        console.log('Could not load elements');
-      }
+      console.log(`Elements: ${JSON.stringify(elements)}`);
     },
     onCancel: () => {
       console.log("Pop up closed!")
