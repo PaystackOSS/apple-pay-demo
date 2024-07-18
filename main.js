@@ -33,12 +33,12 @@ const makePaymentButton = document.getElementById('payment-btn')
 //     onCancel() {
 //       // do stuff
 //     },
-//     onElementsMount(elements) { // { applePay: true } or null
-//       if (elements) {
-//         console.log(`Successfully mounted elements: ${JSON.stringify(elements)}`);
-//       } else {
-//         console.log('Could not load elements');
-//       }
+    // onElementsMount(elements) { // { applePay: true } or null
+    //   if (elements) {
+    //     console.log(`Successfully mounted elements: ${JSON.stringify(elements)}`);
+    //   } else {
+    //     console.log('Could not load elements');
+    //   }
 //     }
 //   });
 // }
@@ -46,13 +46,17 @@ const makePaymentButton = document.getElementById('payment-btn')
 // Method 2
 const makePayment = async () => {
   await paystack.checkout({
-    // key: PUBLIC_KEY,
-    accessCode: "n0a04yemqdflit4",
-    // email: 'example@email.com',
-    // amount: 10000,
+    accessCode: "rl7pny5ixu0yyhd",
     onSuccess: (transaction) => {
       console.log("Transaction: ", transaction)
       alert(`Ref: ${transaction.reference}`)
+    },
+    onElementsMount(elements) { // { applePay: true } or null
+      if (elements) {
+        console.log(`Successfully mounted elements: ${JSON.stringify(elements)}`);
+      } else {
+        console.log('Could not load elements');
+      }
     },
     onCancel: () => {
       console.log("Pop up closed!")
